@@ -1,17 +1,16 @@
 			<div class="row" id="addBackup">
+				<ul class="nav nav-tabs">
+	 				<li class="active"><a data-toggle="tab" href="#home">Serie</a></li>
+	  				<li><a data-toggle="tab" href="#menu1">Anime</a></li>
+	  				<li><a data-toggle="tab" href="#menu2">Peliculas</a></li>
+				</ul>
 
-				<div class="panel-group">
-					<div class="panel panel-default">
-				    	<div class="panel-heading">
-				      		<h4 class="panel-title">
-				        		<a data-toggle="collapse" href="#collapse1">Series</a>
-				      		</h4>
-				    	</div>
-
-					    <div id="collapse1" class="panel-collapse collapse">
-					    	<div class="panel-body">
-			  					<div class="col-xs-3 col-md-3">
-							    	<div class="panel panel-primary">
+				<div class="tab-content">
+	 				<div id="home" class="tab-pane fade in active">
+	 
+	    					<div class="panel-body">
+			  					<div class="col-xs-4 col-md-4">
+							    	<div class="panel panel-primary" >
 			      						<div class="panel-heading">Agregar</div>
 			     					 	<div class="panel-body">
 
@@ -51,15 +50,21 @@
 				     					 		<?= form_input($nombre); ?>
 				     					 	</div>
 
+				     					 	</br>
+
 				     					 	<div class="form-group">
 			     					 			<?= form_label('Nº de Temporadas: ', 'lblseason'); ?>
 			     					 			<?= form_input($temp); ?>
 			     					 		</div>
 
+			     					 		</br>
+
 			     					 		<div class="form-group">
 			     					 			<?= form_label('Finalizada: ', 'lblfinish'); ?>
 			     					 			<?= form_checkbox($finalizada, FALSE); ?>
 			     					 		</div>
+
+
 
 			     					 		<div class="form-group">
 			     					 			<?= form_submit($addBoton); ?>
@@ -71,7 +76,7 @@
 			     					</div>
 			  					</div>
 
-			   					<div class="col-xs-3 col-md-3">
+			   					<div class="col-xs-4 col-md-4">
 							    	<div class="panel panel-primary">
 			      						<div class="panel-heading">Editar</div>
 			     						 <div class="panel-body">
@@ -148,17 +153,34 @@
 			    					</div>
 	  							</div>
 
-			   					<div class="col-xs-3 col-md-3">
+
+			   					<div class="col-xs-4 col-md-4">
 							    	<div class="panel panel-primary">
 			      						<div class="panel-heading">Eliminar</div>
 			     						 <div class="panel-body">Panel Content</div>
 			    					</div>
 	  							</div>
-	  							
 					    	</div>
-						</div>
+	  				</div>
+
+					<div id="menu1" class="tab-pane fade">
+						<h3>Menu 1</h3>
+						<p>Some content in menu 1.</p>
 					</div>
-				</div>
+
+					<div id="menu2" class="tab-pane fade">
+						<h3>Menu 2</h3>
+						<p>Some content in menu 2.</p>
+					</div>
+				</div
+
+					    
+
+						
+
+
+
+
   			</div>
 
 

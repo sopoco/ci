@@ -8,9 +8,15 @@ class Series_model extends CI_Model
 		$this->load->database();
 	}
 
+
 	function insertSerie($data)
 	{
-		$this->db->insert('serie', array('id'=>$data['id'], 'nombre'=>$data['nombre'], 'temporadas'=>$data['temporadas'], 'finalizada'=>$data['finalizada'], 'id_usuario'=>$data['id_usuario']  ));
+		$this->db->insert('serie', array(
+			'id'=>$data['id'], 
+			'nombre'=>$data['nombre'],
+			'temporadas'=>$data['temporadas'], 
+			'finalizada'=>$data['finalizada'],
+			'id_usuario'=>$data['id_usuario']));
 	}
 
 	function selectAllSeries()
@@ -29,7 +35,7 @@ class Series_model extends CI_Model
         }
 	}
 
-	function loadSerie($nombreSerie)
+	/*function loadSerie($nombreSerie)
 	{
 		$this->db->select('nombre','temporadas','finalizada')
 		$this->db->from('serie');
@@ -44,8 +50,7 @@ class Series_model extends CI_Model
         {
         	return NULL;
         }
-
-	}
+	}*/
 
 
 
