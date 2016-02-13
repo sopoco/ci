@@ -14,11 +14,12 @@ class Panel extends CI_Controller
 		$datos['pass'] = $this->session->userdata('pass');
 
 		$dropdownSeries['nombreSerie'] = $this->selectSeries();
-		//print_r($dropdownSeries['nombre']);
 
 
 		$this->load->view('panel_view',$datos);
-		$this->load->view('panels/serie', $dropdownSeries);
+		$this->load->view('panels/serie_add');
+		$this->load->view('panels/serie_delete',$dropdownSeries);
+		//$this->load->view('panels/serie_update',$list);
 	}
 
 	public function insertSerie()
@@ -43,10 +44,19 @@ class Panel extends CI_Controller
 		redirect(base_url());
 	}
 
-	public function selectSeries()
+
+	private function selectSeries()//carga las series en dropdown
 	{
 		$data['nombre'] = $this->series_model->selectAllSeries();
 		return $data['nombre'];
+	}
+
+	public function deleteSerie()//borra serie
+	{
+		$serie = $this->input->post('selectSerie');
+
+		$this->series_model->deleteSerie($serie);
+		redirect(base_url());
 	}
 
 	private function createSerieID()

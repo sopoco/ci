@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -24,7 +25,7 @@
 					    </div>
 
 					    <div class="collapse navbar-collapse navbar-ex6-collapse" >
-					    	<ul class="nav navbar-nav"  style:'width:50%'>
+					    	<ul class="nav navbar-nav">
 					    		<li><a href="<?php echo base_url() ?>panel">Inicio </a></li>
 								<li class="dropdown">
 				                	<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Backup <span class="caret"></span></a>

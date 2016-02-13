@@ -27,7 +27,8 @@ class Series_model extends CI_Model
 
 		if ($query->num_rows() > 0)
         { 
-        	return $query->result_array();
+       		return $query->result_array();
+        	//return $query->row_array(); 
         }
         else 
         {
@@ -35,22 +36,28 @@ class Series_model extends CI_Model
         }
 	}
 
-	/*function loadSerie($nombreSerie)
+	function loadSerie($nombreSerie)
 	{
-		$this->db->select('nombre','temporadas','finalizada')
+		$this->db->select('*');
 		$this->db->from('serie');
 		$this->db->where('nombre',$nombreSerie);
 		$query = $this->db->get();
 
 		if ($query->num_rows() > 0)
         { 
-        	return $query->result_array();
+        	return $query->row_array();
         }
         else 
         {
         	return NULL;
         }
-	}*/
+	}
+
+	function deleteSerie($nombre)
+	{
+    	$this->db->where('nombre', $nombre);
+    	$this->db->delete('serie');
+	}
 
 
 
