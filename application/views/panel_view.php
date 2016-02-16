@@ -4,9 +4,8 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<meta name="viewport" content="width=device-witdh, user-scalable=no, initial-scale=1.0, maximun-scale=2.0, minimun-scale=10">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/sopo.css">
-	</head>
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/sopo.css">
 	
 		<body>
 

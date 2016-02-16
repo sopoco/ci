@@ -19,16 +19,17 @@ class Series_model extends CI_Model
 			'id_usuario'=>$data['id_usuario']));
 	}
 
-	function selectAllSeries()
+	function selectAllSeries($usuario)
 	{
 		$this->db->select('nombre');
 		$this->db->from('serie');
+		$this->db->where('id_usuario',$usuario);
+		$this->db->order_by("nombre", "asc"); 
 		$query = $this->db->get();
 
 		if ($query->num_rows() > 0)
         { 
        		return $query->result_array();
-        	//return $query->row_array(); 
         }
         else 
         {
@@ -59,13 +60,36 @@ class Series_model extends CI_Model
     	$this->db->delete('serie');
 	}
 
+	function getID($nombreSerie)
+	{
+		$this->db->select('id');
+		$this->db->from('serie');
+		$this->db->where('nombre',$nombreSerie);
+		$query = $this->db->get();
 
+		if ($query->num_rows() > 0)
+        { 
+        	return $query->row_array();
+        }
+        else 
+        {
+        	return NULL;
+        }
 
+	}
 
+	function updateSerie($update)
+	{
+		$data = array(
+               'nombre' => $update['nombre'],
+               'temporadas' => $update['temporadas'],
+               'finalizada' => $update['finalizada']
+            ); 
 
-
-
-
+		$this->db->where('id', $update['nombre']);
+		$this->db->where('id_usuario', $update['id_usuario']);
+		$this->db->update('serie', $data); 
+	}
 }
 
 ?>

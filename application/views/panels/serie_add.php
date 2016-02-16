@@ -40,7 +40,7 @@
 			     					 			$addBoton = array(
 			     					 				'name' => 'insertSerie',
 			     					 				'value' => 'Agregar',
-			     					 				'class' => 'btn btn-primary'
+			     					 				'class' => 'btn btn-primary pull-right'
 			     					 				);
 
 			     					 		 ?>
@@ -48,16 +48,12 @@
 			     					 		 <div class="form-group">
 				     					 		<?= form_label('Nombre: ', 'lblname'); ?>
 				     					 		<?= form_input($nombre); ?>
-				     					 	</div>
-
-				     					 	</br>
+				     					 	</div>				   	 	
 
 				     					 	<div class="form-group">
 			     					 			<?= form_label('Nº de Temporadas: ', 'lblseason'); ?>
 			     					 			<?= form_input($temp); ?>
-			     					 		</div>
-
-			     					 		</br>
+			     					 		</div>			     					 	
 
 			     					 		<div class="form-group">
 			     					 			<?= form_label('Finalizada: ', 'lblfinish'); ?>
@@ -65,7 +61,7 @@
 			     					 		</div>
 
 
-
+			     					 	</br> </br> </br>
 			     					 		<div class="form-group">
 			     					 			<?= form_submit($addBoton); ?>
 			     					 		</div>
