@@ -22,6 +22,7 @@
 			     						 		$editloadSerie = array(
 			     					 				'name' => 'btnLoadSerie',
 			     					 				'value' => 'Cargar',
+			     					 				'onclick' => 'oli();',
 			     					 				'class' => 'btn btn-primary btn-xs' 
 			     					 				);
 			     						 	?>
@@ -33,8 +34,3 @@
 			     						 	</div>
 			     						 	
 			     						 	<?=form_close(); ?>
-
-
-
-
-

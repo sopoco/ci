@@ -6,6 +6,12 @@
 		<meta name="viewport" content="width=device-witdh, user-scalable=no, initial-scale=1.0, maximun-scale=2.0, minimun-scale=10">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>css/sopo.css">
+
+		<script src="<?php echo base_url(); ?>js/jquery.js"></script>
+		<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>js/sopo.js"> </script>
+
+	</head>
 	
 		<body>
 
@@ -31,7 +37,7 @@
 				                	<ul class="dropdown-menu dropdown-menu-left" role="menu">
 					                  	<li><a href="#"></a></li>
 					                    	<li><a class="dropdown-toggle" href="#">Anime</a></li>
-					                    	<li><a class="dropdown-toggle" href="#">Series</a></li>
+					                    	<li><a class="dropdown-toggle" href="<?php echo base_url() ?>tablas/serieTable">Series</a></li>
 					                    	<li><a class="dropdown-toggle" href="#">Peliculas</a></li>
 					                    	<li><a class="dropdown-toggle" href="#">Isos</a></li>
 					                </ul>

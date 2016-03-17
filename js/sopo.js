@@ -1,0 +1,4 @@
+function oli() 
+{
+	alert("oliwi");
+}

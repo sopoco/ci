@@ -75,7 +75,6 @@ class Series_model extends CI_Model
         {
         	return NULL;
         }
-
 	}
 
 	function updateSerie($update)
@@ -89,6 +88,24 @@ class Series_model extends CI_Model
 		$this->db->where('id', $update['nombre']);
 		$this->db->where('id_usuario', $update['id_usuario']);
 		$this->db->update('serie', $data); 
+	}
+
+	function selectSeries($usuario)
+	{
+		$this->db->select('nombre, temporadas, finalizada');
+		$this->db->from('serie');
+		$this->db->where('id_usuario',$usuario);
+		$this->db->order_by("nombre", "asc"); 
+		$query = $this->db->get();
+
+		if ($query->num_rows() > 0)
+        { 
+       		return $query->result_array();
+        }
+        else 
+        {
+        	return NULL;
+        }
 	}
 }
 
