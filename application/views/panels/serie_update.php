@@ -35,12 +35,12 @@
 			     					 			<?= form_label('Finalizada: ', 'lblfinish'); ?>
 
 			     					 			<?php if ($infoSerie['finalizada'] == 'Si'): ?>
-			     					 				<? $cheked = TRUE; ?>
+			     					 				<? $checked = TRUE; ?>
 			     					 			<?php else: ?>
-			     					 				<? $cheked = FALSE; ?>
+			     					 				<? $checked = FALSE; ?>
 			     					 			<?php endif; ?>	
 
-			     					 			<?= form_checkbox('finalizadaEdit','1', $cheked); ?>		     					 		
+			     					 			<?= form_checkbox('finalizadaEdit','1', $checked); ?>		     					 		
 			     					 		</div>
 
 			     					 		<div class="form-group">
@@ -54,20 +54,3 @@
 	  							</div>
 					    	</div>
 	  				</div>
-
-					<div id="anime" class="tab-pane fade">
-						<h3>Menu 1</h3>
-						<p>Some content in menu 1.</p>
-					</div>
-
-					<div id="pelicula" class="tab-pane fade">
-						<h3>Menu 2</h3>
-						<p>Some content in menu 2.</p>
-					</div>
-				</div>
-  			</div>
-
-
-
-		</body>
-</html>

@@ -52,15 +52,17 @@
 				</div>	
 			</div>
 
-			<div class="col-xs-4 col-md-6">
-				<div class="row" id="tablaSerie">
-
-					<table class="table table-bordered table-hover">
+			
+			<div class="row" id="tablaSerie">
+				<div class="col-xs-4 col-md-6">
+					<table class="table table-bordered table-hover table-condensed">
 						<tr class="info">
-							<td align=center><b>#</b></td>
-							<td align=center><b>Nombre</b></td>
-							<td align=center><b>Temporadas</b></td>
-							<td align=center><b>Finalizada</b></td>
+							<td align=center> <font size=3> <b>#</b> </font> </td>
+							<td align=center> <font size=3> <b>Nombre</b> </font> </td>
+							<td align=center> <font size=3> <b>Temporadas</b> </font> </td>
+							<td align=center> <font size=3> <b>Finalizada</b> </font> </td>
+							<td align=center> <font size=3> <b>HDD</b> </font> </td>
+
 						</tr>
 							<?php $cont=1; ?>
 							<?php if (!empty($series)): ?>
@@ -68,19 +70,16 @@
 									<tr>
 										<td align=center> <b><?php print_r($cont); ?></b> </td>
 										<td> <?php print_r($item['nombre']);?> </td>
-										<td> <?php print_r($item['temporadas']);?> </td>
-										<td> <?php print_r($item['finalizada']);?> </td>
+										<td align=center> <?php print_r($item['temporadas']);?> </td>
+										<td align=center> <?php print_r($item['finalizada']);?> </td>
+										<td align=center> <?php ?> </td>
 									</tr>
 									<?php $cont=$cont+1; ?>
 								<?php endforeach ?>
 							<?php endif; ?>
-
-
-
 					</table>	
 				</div>
 			</div>
-
 
 
 

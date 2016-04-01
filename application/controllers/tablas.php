@@ -17,12 +17,12 @@ class Tablas extends CI_Controller
 	{
 		$datos['user'] = $this->session->userdata('user');
 		$datos['pass'] = $this->session->userdata('pass');
-		$datos['series'] = $this->selectSeries();
+		$tablas['series'] = $this->selectSeries();
 
-		$this->load->view('serie_table',$datos);
+		$this->load->view('serie_table',$tablas);
 	}
 
-	private function selectSeries()//carga las series en dropdown
+	private function selectSeries()//carga table series
 	{
 		$data['series'] = $this->series_model->selectSeries( $this->session->userdata('user') );
 		return $data['series'];

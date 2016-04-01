@@ -26,11 +26,18 @@ class Login extends CI_Controller
 			}
 			else
 			{
-			#	$this->load->view('login_view');
+				echo'
+		          <div class="alert alert-danger">
+					  <strong>Error Login!</strong> Usuario y/o Contraseña Incorrecta 
+				  </div>';
 			}
 		}
-
+		
 		$this->load->view('login_view');
+		
+
+
+
 	}
 
 	public function logout()

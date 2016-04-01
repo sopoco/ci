@@ -19,21 +19,21 @@
 
 			     					 		<?
 			     					 			$nombre = array(
-			     					 				'name' => 'nombre',
+			     					 				'name' => 'nombreAdd',
 			     					 				'placeholder' => 'Ingrese Nombre',
 			     					 				'style' => 'width:100%',
 			     					 				'class' => 'form-control'
 			     					 				);
 
 			     					 			$temp = array(
-			     					 				'name' => 'temporada',
+			     					 				'name' => 'temporadaAdd',
 			     					 				'placeholder' => 'Ingrese el Nº de Temp',
 			     					 				'style' => 'width:100%',
 			     					 				'class' => 'form-control'
 			     					 				);
 
 			     					 			$finalizada = array(
-			     					 				'name' => 'finalizada',
+			     					 				'name' => 'finalizadaADD',
 			     					 				'value' => '1'
 			     					 				);
 
